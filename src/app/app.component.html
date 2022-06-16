@@ -73,96 +73,212 @@
 </mat-expansion-panel>
 
 </mat-accordion> -->
+<div class="container">
+    <h1>SAMPLE MAT-ACCORDION</h1>
+    <!-- accordion -->
+    <mat-accordion>
+        <!-- accordion 1 -->
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+            <!-- header 1 -->
+            <mat-expansion-panel-header>Production</mat-expansion-panel-header>
+            <!-- title 1 -->
+            <mat-panel-title>Car</mat-panel-title>
+            <!-- description 1 -->
+            <mat-panel-description>
+                <p>Test authors are developers using component harnesses written by someone else to test their
+                    application.
+                    For example, this could be an app developer who uses a third-party menu component and needs to
+                    interact
+                    with the menu in a unit test.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+            </mat-panel-description>
+            <!-- action row and button 1 -->
+            <mat-action-row>
+                <button mat-button color="primary" (click)="nextStep()">Next</button>
+            </mat-action-row>
+        </mat-expansion-panel>
 
-<h1>SAMPLE MAT-ACCORDION</h1>
-<!-- accordion -->
+        <!-- ////////////////////////////// -->
+
+        <!-- accordion 2 -->
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+            <!-- header 2 -->
+            <mat-expansion-panel-header>Production</mat-expansion-panel-header>
+            <!-- title 2 -->
+            <mat-panel-title>Car</mat-panel-title>
+            <!-- description 2 -->
+            <mat-panel-description>
+                <p>Test authors are developers using component harnesses written by someone else to test their
+                    application.
+                    For example, this could be an app developer who uses a third-party menu component and needs to
+                    interact
+                    with the menu in a unit test.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+            </mat-panel-description>
+            <!-- action row and button 2 -->
+            <mat-action-row>
+                <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                <button mat-button color="primary" (click)="nextStep()">Next</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- ////////////////////////////// -->
+
+        <!-- accordion 3 -->
+        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+            <!-- header 3 -->
+            <mat-expansion-panel-header>Production</mat-expansion-panel-header>
+            <!-- title 3 -->
+            <mat-panel-title>Car</mat-panel-title>
+            <!-- description 3 -->
+            <mat-panel-description>
+                <p>Test authors are developers using component harnesses written by someone else to test their
+                    application.
+                    For example, this could be an app developer who uses a third-party menu component and needs to
+                    interact
+                    with the menu in a unit test.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
+                    expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores
+                    eveniet
+                    blanditiis quasi doloribus expedita.</p>
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Date</mat-label>
+                        <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+                    </mat-form-field>
+                    <mat-datepicker #picker></mat-datepicker>
+                </div>
+            </mat-panel-description>
+            <!-- action row and button 3 -->
+            <mat-action-row>
+                <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                <button mat-button color="primary" (click)="nextStep()">End</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+<hr class="padding_20px">
+
+<!-- Card Example -->
+<h1>MAT CARD 1</h1>
+<div class="container">
+    <mat-card-title style="background-color:antiquewhite;">Name</mat-card-title>
+    <mat-card>
+        <mat-card-header>Sample</mat-card-header>
+        <mat-card-content>
+            <p>An organizational structure is a system that outlines how certain activities are directed in order to
+                achieve
+                the goals of an organization. These activities can include rules, roles, and responsibilities. The
+                organizational structure also determines how information flows between levels within the company.</p>
+        </mat-card-content>
+        <mat-card-footer style="text-align: center; background-color: grey;">@KGiSL</mat-card-footer>
+    </mat-card>
+</div>
+
+<h1>MAT CARD 2</h1>
+<div class="container">
+    <mat-card-title style="background-color:antiquewhite;">Name</mat-card-title>
+    <mat-card>
+        <mat-card-header>Sample</mat-card-header>
+        <mat-card-content>
+            <p>An organizational structure is a system that outlines how certain activities are directed in order to
+                achieve
+                the goals of an organization. These activities can include rules, roles, and responsibilities. The
+                organizational structure also determines how information flows between levels within the company.</p>
+        </mat-card-content>
+        <mat-card-footer style="text-align: center; background-color: grey;">@KGiSL</mat-card-footer>
+    </mat-card>
+</div>
+<hr class="padding_20px">
+
+<!-- ///////////////////////////////////////////////////////////////////// -->
+
+<h1>ACCORDION INSIDE CARD</h1>
 <mat-accordion>
-    <!-- accordion 1 -->
     <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-        <!-- header 1 -->
-        <mat-expansion-panel-header>Production</mat-expansion-panel-header>
-        <!-- title 1 -->
-        <mat-panel-title>Car</mat-panel-title>
-        <!-- description 1 -->
-        <mat-panel-description>
-            <p>Test authors are developers using component harnesses written by someone else to test their application.
-                For example, this could be an app developer who uses a third-party menu component and needs to interact
-                with the menu in a unit test.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-        </mat-panel-description>
-        <!-- action row and button 1 -->
-        <mat-action-row>
-            <button mat-button color="primary" (click)="nextStep()">Next</button>
-        </mat-action-row>
-    </mat-expansion-panel>
-
-    <!-- ////////////////////////////// -->
-
-    <!-- accordion 2 -->
-    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
-        <!-- header 2 -->
-        <mat-expansion-panel-header>Production</mat-expansion-panel-header>
-        <!-- title 2 -->
-        <mat-panel-title>Car</mat-panel-title>
-        <!-- description 2 -->
-        <mat-panel-description>
-            <p>Test authors are developers using component harnesses written by someone else to test their application.
-                For example, this could be an app developer who uses a third-party menu component and needs to interact
-                with the menu in a unit test.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-        </mat-panel-description>
-        <!-- action row and button 2 -->
-        <mat-action-row>
-            <button mat-button color="warn" (click)="prevStep()">Previous</button>
-            <button mat-button color="primary" (click)="nextStep()">Next</button>
-        </mat-action-row>
-    </mat-expansion-panel>
-
-    <!-- ////////////////////////////// -->
-
-    <!-- accordion 3 -->
-    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
         <!-- header 3 -->
-        <mat-expansion-panel-header>Production</mat-expansion-panel-header>
+        <mat-expansion-panel-header>Sample Inside Card</mat-expansion-panel-header>
         <!-- title 3 -->
-        <mat-panel-title>Car</mat-panel-title>
+        <!-- <mat-panel-title>Car</mat-panel-title> -->
         <!-- description 3 -->
         <mat-panel-description>
-            <p>Test authors are developers using component harnesses written by someone else to test their application.
-                For example, this could be an app developer who uses a third-party menu component and needs to interact
-                with the menu in a unit test.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque blanditiis quibusdam
-                expedita illo. Incidunt aperiam placeat, in atque eligendi quia. Enim voluptates, alias dolores eveniet
-                blanditiis quasi doloribus expedita.</p>
-            <div>
-                <mat-form-field appearance="fill">
-                    <mat-label>Date</mat-label>
-                    <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
-                </mat-form-field>
-                <mat-datepicker #picker></mat-datepicker>
-            </div>
+
+            <mat-card>
+                <mat-card-title style="background-color:antiquewhite;">Name</mat-card-title>
+                <mat-card-header>Sample</mat-card-header>
+                <mat-card-content>
+                    <p>An organizational structure is a system that outlines how certain activities are directed in
+                        order to
+                        achieve
+                        the goals of an organization. These activities can include rules, roles, and responsibilities.
+                        The
+                        organizational structure also determines how information flows between levels within the
+                        company.</p>
+                </mat-card-content>
+                <mat-card-footer style="text-align: center; background-color: grey;">@KGiSL</mat-card-footer>
+            </mat-card>
+
+        </mat-panel-description>
+        <!-- action row and button 3 -->
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">End</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+        <!-- header 3 -->
+        <mat-expansion-panel-header>Sample Inside Card</mat-expansion-panel-header>
+        <!-- title 3 -->
+        <!-- <mat-panel-title>Car</mat-panel-title> -->
+        <!-- description 3 -->
+        <mat-panel-description>
+
+            <mat-card>
+                <mat-card-title style="background-color:antiquewhite;">Name</mat-card-title>
+                <mat-card-header>Sample</mat-card-header>
+                <mat-card-content>
+                    <p>An organizational structure is a system that outlines how certain activities are directed in
+                        order to
+                        achieve
+                        the goals of an organization. These activities can include rules, roles, and responsibilities.
+                        The
+                        organizational structure also determines how information flows between levels within the
+                        company.</p>
+                </mat-card-content>
+                <mat-card-footer style="text-align: center; background-color: grey;">@KGiSL</mat-card-footer>
+            </mat-card>
+
         </mat-panel-description>
         <!-- action row and button 3 -->
         <mat-action-row>
